@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { onHide, onLoad, onReady, onShareAppMessage } from '@dcloudio/uni-app'
-import { nextTick, onMounted, onUnmounted, reactive, ref, shallowRef, watch } from 'vue'
+import { nextTick, onUnmounted, reactive, ref, watch } from 'vue'
 
 definePage({
   style: {
