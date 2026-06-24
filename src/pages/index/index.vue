@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { HomeBannerItem, RecommendItem } from '@/api/home/home'
 import { onHide, onPageScroll, onPullDownRefresh, onReachBottom, onShareAppMessage, onShow } from '@dcloudio/uni-app'
-import { ref, watch, onMounted } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import { getOnShelfSeriesBanners, getRecommendList, homeSearch } from '@/api/home/home'
 import { useCategoryFilter } from '@/composables/useCategoryFilter'
 import { showCustomToast } from '@/composables/useCustomToast'
@@ -565,14 +565,16 @@ function goToSlimePage() {
     </view>
 
     <!-- 史莱姆解压空间悬浮入口 -->
-    <view 
-      class="fixed bottom-[180rpx] right-4 z-40 w-16 h-16 rounded-full bg-gradient-to-tr from-pink-500 via-purple-500 to-indigo-500 flex flex-col items-center justify-center shadow-2xl active:scale-90 transition-transform animate-bounce border border-[rgba(255,255,255,0.2)]"
+    <view
+      class="fixed bottom-[180rpx] right-4 z-40 h-16 w-16 flex flex-col animate-bounce items-center justify-center border border-[rgba(255,255,255,0.2)] rounded-full from-pink-500 via-purple-500 to-indigo-500 bg-gradient-to-tr shadow-2xl transition-transform active:scale-90"
       style="box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4); animation-duration: 2.8s;"
       @click="goToSlimePage"
     >
-      <text class="text-2xl leading-none mt-1">🟢</text>
-      <text class="text-[16rpx] font-bold text-white tracking-wider mt-[4rpx] leading-none">捏史莱姆</text>
-      <view class="absolute -top-1 -right-1 px-1.5 py-0.5 bg-red-500 text-[14rpx] text-white rounded-full font-bold scale-75 leading-none shadow-md">解压</view>
+      <text class="mt-1 text-2xl leading-none">🟢</text>
+      <text class="mt-[4rpx] text-[16rpx] text-white font-bold leading-none tracking-wider">捏史莱姆</text>
+      <view class="absolute scale-75 rounded-full bg-red-500 px-1.5 py-0.5 text-[14rpx] text-white font-bold leading-none shadow-md -right-1 -top-1">
+        解压
+      </view>
     </view>
   </view>
 </template>

@@ -86,7 +86,8 @@
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "test": "vitest run"
   },
   "dependencies": {
     "@alova/adapter-uniapp": "^2.0.14",
@@ -150,13 +151,16 @@
     "@uni-ku/root": "1.4.1",
     "@unocss/eslint-plugin": "^66.2.3",
     "@unocss/preset-legacy-compat": "66.0.0",
+    "@vitejs/plugin-vue": "^6.0.7",
     "@vue/runtime-core": "3.4.21",
+    "@vue/test-utils": "2.4.6",
     "@vue/tsconfig": "^0.1.3",
     "autoprefixer": "^10.4.20",
     "cross-env": "^10.0.0",
     "eslint": "^9.31.0",
     "eslint-plugin-format": "^1.0.1",
     "husky": "^9.1.7",
+    "jsdom": "24.1.0",
     "lint-staged": "^15.2.10",
     "miniprogram-api-typings": "^4.1.0",
     "openapi-ts-request": "^1.10.0",
@@ -172,6 +176,7 @@
     "unplugin-icons": "^23.0.1",
     "vite": "5.2.8",
     "vite-plugin-restart": "^1.0.0",
+    "vitest": "1.6.0",
     "vue-tsc": "^3.0.6"
   },
   "pnpm": {
